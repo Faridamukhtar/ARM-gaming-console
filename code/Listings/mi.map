@@ -1,0 +1,330 @@
+Component: Arm Compiler for Embedded 6.19 Tool: armlink [5e73cb00]
+
+==============================================================================
+
+Section Cross References
+
+    phase1.o(MYCODE) refers to phase1.o(MYDATA) for SCORE
+    startup_stm32f10x_md.o(STACK) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(HEAP) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(RESET) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(STACK) for __initial_sp
+    startup_stm32f10x_md.o(RESET) refers to startup_stm32f10x_md.o(.text) for Reset_Handler
+    startup_stm32f10x_md.o(.text) refers (Special) to heapauxi.o(.text) for __use_two_region_memory
+    startup_stm32f10x_md.o(.text) refers to system_stm32f10x.o(.text.SystemInit) for SystemInit
+    startup_stm32f10x_md.o(.text) refers to phase1.o(MYCODE) for __main
+    startup_stm32f10x_md.o(.text) refers to startup_stm32f10x_md.o(HEAP) for Heap_Mem
+    startup_stm32f10x_md.o(.text) refers to startup_stm32f10x_md.o(STACK) for Stack_Mem
+    system_stm32f10x.o(.text.SystemInit) refers to system_stm32f10x.o(.text.SetSysClock) for SetSysClock
+    system_stm32f10x.o(.ARM.exidx.text.SystemInit) refers to system_stm32f10x.o(.text.SystemInit) for [Anonymous Symbol]
+    system_stm32f10x.o(.text.SetSysClock) refers to system_stm32f10x.o(.text.SetSysClockTo72) for SetSysClockTo72
+    system_stm32f10x.o(.ARM.exidx.text.SetSysClock) refers to system_stm32f10x.o(.text.SetSysClock) for [Anonymous Symbol]
+    system_stm32f10x.o(.text.SystemCoreClockUpdate) refers to system_stm32f10x.o(.data.SystemCoreClock) for SystemCoreClock
+    system_stm32f10x.o(.text.SystemCoreClockUpdate) refers to system_stm32f10x.o(.rodata.AHBPrescTable) for AHBPrescTable
+    system_stm32f10x.o(.ARM.exidx.text.SystemCoreClockUpdate) refers to system_stm32f10x.o(.text.SystemCoreClockUpdate) for [Anonymous Symbol]
+    system_stm32f10x.o(.ARM.exidx.text.SetSysClockTo72) refers to system_stm32f10x.o(.text.SetSysClockTo72) for [Anonymous Symbol]
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing egcellent.o(.text), (0 bytes).
+    Removing definitions.o(MYDATA), (46 bytes).
+    Removing system_stm32f10x.o(.text), (0 bytes).
+    Removing system_stm32f10x.o(.ARM.exidx.text.SystemInit), (8 bytes).
+    Removing system_stm32f10x.o(.ARM.exidx.text.SetSysClock), (8 bytes).
+    Removing system_stm32f10x.o(.text.SystemCoreClockUpdate), (290 bytes).
+    Removing system_stm32f10x.o(.ARM.exidx.text.SystemCoreClockUpdate), (8 bytes).
+    Removing system_stm32f10x.o(.ARM.exidx.text.SetSysClockTo72), (8 bytes).
+    Removing system_stm32f10x.o(.data.SystemCoreClock), (4 bytes).
+    Removing system_stm32f10x.o(.rodata.AHBPrescTable), (16 bytes).
+
+10 unused section(s) (total 388 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
+    RTE/Device/STM32F103C8/startup_stm32f10x_md.s 0x00000000   Number         0  startup_stm32f10x_md.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    definitions.s                            0x00000000   Number         0  definitions.o ABSOLUTE
+    phase1.s                                 0x00000000   Number         0  phase1.o ABSOLUTE
+    system_stm32f10x.c                       0x00000000   Number         0  system_stm32f10x.o ABSOLUTE
+    RESET                                    0x08000000   Section      236  startup_stm32f10x_md.o(RESET)
+    .text                                    0x080000ec   Section       64  startup_stm32f10x_md.o(.text)
+    .text                                    0x0800012c   Section        0  heapauxi.o(.text)
+    SetSysClock                              0x08000135   Thumb Code     8  system_stm32f10x.o(.text.SetSysClock)
+    [Anonymous Symbol]                       0x08000134   Section        0  system_stm32f10x.o(.text.SetSysClock)
+    SetSysClockTo72                          0x0800013d   Thumb Code   290  system_stm32f10x.o(.text.SetSysClockTo72)
+    [Anonymous Symbol]                       0x0800013c   Section        0  system_stm32f10x.o(.text.SetSysClockTo72)
+    [Anonymous Symbol]                       0x08000260   Section        0  system_stm32f10x.o(.text.SystemInit)
+    MYCODE                                   0x080002c8   Section    11896  phase1.o(MYCODE)
+    CONFIG_BUTTONS                           0x080003fb   Thumb Code    74  phase1.o(MYCODE)
+    LCD_WRITE                                0x08000445   Thumb Code    44  phase1.o(MYCODE)
+    LCD_COMMAND_WRITE                        0x08000471   Thumb Code    44  phase1.o(MYCODE)
+    LCD_DATA_WRITE                           0x0800049d   Thumb Code    36  phase1.o(MYCODE)
+    LCD_INIT                                 0x080004c1   Thumb Code   270  phase1.o(MYCODE)
+    ADDRESS_SET                              0x080005cf   Thumb Code    92  phase1.o(MYCODE)
+    DRAW_RECTANGLE_FILLED                    0x0800066f   Thumb Code    70  phase1.o(MYCODE)
+    SETUP                                    0x080006b5   Thumb Code    16  phase1.o(MYCODE)
+    PORTA_CONF                               0x080006c5   Thumb Code   112  phase1.o(MYCODE)
+    delay_1_second                           0x08000735   Thumb Code    16  phase1.o(MYCODE)
+    delay_sixtth_second                      0x08000787   Thumb Code    22  phase1.o(MYCODE)
+    delay_10_MILLIsecond                     0x080007c9   Thumb Code    18  phase1.o(MYCODE)
+    DrawDino                                 0x080007db   Thumb Code   212  phase1.o(MYCODE)
+    DrawLives                                0x080008d5   Thumb Code   668  phase1.o(MYCODE)
+    DrawNav                                  0x08000b71   Thumb Code    36  phase1.o(MYCODE)
+    DrawBlocks                               0x08000b97   Thumb Code   188  phase1.o(MYCODE)
+    DrawScore                                0x08000c53   Thumb Code   942  phase1.o(MYCODE)
+    DRAW_L                                   0x08001001   Thumb Code    88  phase1.o(MYCODE)
+    DRAW_O                                   0x08001059   Thumb Code   160  phase1.o(MYCODE)
+    DRAW_S                                   0x080010f9   Thumb Code   196  phase1.o(MYCODE)
+    DRAW_E                                   0x080011bd   Thumb Code   160  phase1.o(MYCODE)
+    DRAW_LOSE_SCREEN                         0x0800125d   Thumb Code    96  phase1.o(MYCODE)
+    DRAW_Y                                   0x080012bd   Thumb Code   152  phase1.o(MYCODE)
+    DRAW_A                                   0x08001355   Thumb Code   152  phase1.o(MYCODE)
+    DRAW_EXCLAMATION                         0x080013ed   Thumb Code    80  phase1.o(MYCODE)
+    DRAW_WIN                                 0x0800143d   Thumb Code   132  phase1.o(MYCODE)
+    DRAW_WINGS                               0x080014c1   Thumb Code   224  phase1.o(MYCODE)
+    DRAW_BODY                                0x080015a1   Thumb Code   188  phase1.o(MYCODE)
+    DRAW_FEET                                0x0800165d   Thumb Code   224  phase1.o(MYCODE)
+    DRAW_HEAD                                0x0800173d   Thumb Code   260  phase1.o(MYCODE)
+    DRAW_BASKET                              0x08001841   Thumb Code   298  phase1.o(MYCODE)
+    DRAW_WHITE_EGG                           0x0800196d   Thumb Code   260  phase1.o(MYCODE)
+    DRAW_RED_EGG                             0x08001a71   Thumb Code   152  phase1.o(MYCODE)
+    DRAWCHICKEN                              0x08001b0b   Thumb Code    24  phase1.o(MYCODE)
+    DRAW_BAR                                 0x08001b23   Thumb Code    44  phase1.o(MYCODE)
+    DRAW_RED_EGG_NAV                         0x08001b4f   Thumb Code   188  phase1.o(MYCODE)
+    DRAW_WHITE_EGG_NAV                       0x08001c0b   Thumb Code   188  phase1.o(MYCODE)
+    DRAW_TWO                                 0x08001cc7   Thumb Code   260  phase1.o(MYCODE)
+    DRAW_ONE                                 0x08001dcd   Thumb Code   116  phase1.o(MYCODE)
+    DRAW_THREE                               0x08001e41   Thumb Code   152  phase1.o(MYCODE)
+    DRAW_FOUR                                0x08001ed9   Thumb Code   116  phase1.o(MYCODE)
+    DRAW_FIVE                                0x08001f4d   Thumb Code   188  phase1.o(MYCODE)
+    INITIALIZE_VARIABLES                     0x0800200b   Thumb Code   206  phase1.o(MYCODE)
+    INITIALIZE_WHITE_EGG                     0x080020d9   Thumb Code    40  phase1.o(MYCODE)
+    INITIALIZE_RED_EGG                       0x08002101   Thumb Code    38  phase1.o(MYCODE)
+    DRAW_NAV_NUMBER                          0x08002175   Thumb Code    68  phase1.o(MYCODE)
+    DRAW_NAV_NUMBER2                         0x080021b9   Thumb Code    48  phase1.o(MYCODE)
+    Draw1                                    0x080021f5   Thumb Code   112  phase1.o(MYCODE)
+    Draw2                                    0x08002265   Thumb Code   188  phase1.o(MYCODE)
+    Draw3                                    0x08002321   Thumb Code   152  phase1.o(MYCODE)
+    Draw4                                    0x080023b9   Thumb Code   296  phase1.o(MYCODE)
+    Draw5                                    0x080024e1   Thumb Code   188  phase1.o(MYCODE)
+    Draw6                                    0x0800259d   Thumb Code   188  phase1.o(MYCODE)
+    Draw7                                    0x08002659   Thumb Code   188  phase1.o(MYCODE)
+    Draw8                                    0x08002715   Thumb Code   188  phase1.o(MYCODE)
+    Draw0                                    0x080027d1   Thumb Code   152  phase1.o(MYCODE)
+    Draw9                                    0x08002869   Thumb Code   188  phase1.o(MYCODE)
+    CHOOSE_STEP                              0x0800292d   Thumb Code   110  phase1.o(MYCODE)
+    INCREMENT_SCORE                          0x0800299b   Thumb Code   240  phase1.o(MYCODE)
+    RANDOM1                                  0x08002a95   Thumb Code    44  phase1.o(MYCODE)
+    RANDOM2                                  0x08002ac1   Thumb Code    44  phase1.o(MYCODE)
+    RANDOM3                                  0x08002aed   Thumb Code    44  phase1.o(MYCODE)
+    RANDOM4                                  0x08002b19   Thumb Code    44  phase1.o(MYCODE)
+    RANDOM5                                  0x08002b45   Thumb Code    44  phase1.o(MYCODE)
+    RANDOM6                                  0x08002b71   Thumb Code    44  phase1.o(MYCODE)
+    RANDOM7                                  0x08002b9d   Thumb Code    44  phase1.o(MYCODE)
+    RANDOM8                                  0x08002bc9   Thumb Code    44  phase1.o(MYCODE)
+    RANDOM9                                  0x08002bf5   Thumb Code    44  phase1.o(MYCODE)
+    RANDOM10                                 0x08002c21   Thumb Code    44  phase1.o(MYCODE)
+    MOVE_WHITE_EGG1_DOWN                     0x08002c4d   Thumb Code   428  phase1.o(MYCODE)
+    MOVE_RED_EGG1_DOWN                       0x08002e29   Thumb Code   376  phase1.o(MYCODE)
+    MOVE_BASKET_RIGHT                        0x08002fa1   Thumb Code   112  phase1.o(MYCODE)
+    MOVE_BASKET_LEFT                         0x08003011   Thumb Code    72  phase1.o(MYCODE)
+    DRAWCHICKENGAME                          0x08003059   Thumb Code   172  phase1.o(MYCODE)
+    WHITE_EGG1_X                             0x20000000   Data           2  phase1.o(MYDATA)
+    MYDATA                                   0x20000000   Section       46  phase1.o(MYDATA)
+    WHITE_EGG1_Y                             0x20000002   Data           2  phase1.o(MYDATA)
+    RED_EGG1_X                               0x20000008   Data           2  phase1.o(MYDATA)
+    RED_EGG1_Y                               0x2000000a   Data           2  phase1.o(MYDATA)
+    RED_EGGX_OFFSET                          0x20000010   Data           2  phase1.o(MYDATA)
+    WHITE_EGGX_OFFSET                        0x20000012   Data           2  phase1.o(MYDATA)
+    RANDOM_EGG_NUMBER                        0x20000014   Data           2  phase1.o(MYDATA)
+    RANDOM_FLAG                              0x20000016   Data           2  phase1.o(MYDATA)
+    EGG_MATAT                                0x20000018   Data           2  phase1.o(MYDATA)
+    STEP_EGG_INITIAL                         0x2000001a   Data           2  phase1.o(MYDATA)
+    BASKET_X                                 0x2000001c   Data           2  phase1.o(MYDATA)
+    BASKET_Y                                 0x2000001e   Data           2  phase1.o(MYDATA)
+    SCORE                                    0x20000020   Data           2  phase1.o(MYDATA)
+    SCORE_RED                                0x20000022   Data           2  phase1.o(MYDATA)
+    SCORE_WHITE                              0x20000024   Data           2  phase1.o(MYDATA)
+    FLAG_WHITE                               0x20000026   Data           2  phase1.o(MYDATA)
+    FLAG_RED                                 0x20000028   Data           2  phase1.o(MYDATA)
+    CURRENT_TIMESTEP                         0x2000002a   Data           2  phase1.o(MYDATA)
+    CURRENT_FRAME                            0x2000002c   Data           2  phase1.o(MYDATA)
+    Heap_Mem                                 0x20000030   Data         512  startup_stm32f10x_md.o(HEAP)
+    HEAP                                     0x20000030   Section      512  startup_stm32f10x_md.o(HEAP)
+    Stack_Mem                                0x20000230   Data        1024  startup_stm32f10x_md.o(STACK)
+    STACK                                    0x20000230   Section     1024  startup_stm32f10x_md.o(STACK)
+    __initial_sp                             0x20000630   Data           0  startup_stm32f10x_md.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$ROPI$EBA8$STANDARDLIB$REQ8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors_Size                           0x000000ec   Number         0  startup_stm32f10x_md.o ABSOLUTE
+    __Vectors                                0x08000000   Data           4  startup_stm32f10x_md.o(RESET)
+    Reset_Handler                            0x080000ed   Thumb Code     8  startup_stm32f10x_md.o(.text)
+    __Vectors_End                            0x080000ec   Data           0  startup_stm32f10x_md.o(RESET)
+    NMI_Handler                              0x080000f5   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    HardFault_Handler                        0x080000f7   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    MemManage_Handler                        0x080000f9   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    BusFault_Handler                         0x080000fb   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    UsageFault_Handler                       0x080000fd   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    SVC_Handler                              0x080000ff   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    DebugMon_Handler                         0x08000101   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    PendSV_Handler                           0x08000103   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    SysTick_Handler                          0x08000105   Thumb Code     2  startup_stm32f10x_md.o(.text)
+    ADC1_2_IRQHandler                        0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    CAN1_RX1_IRQHandler                      0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    CAN1_SCE_IRQHandler                      0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel1_IRQHandler                 0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel2_IRQHandler                 0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel3_IRQHandler                 0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel4_IRQHandler                 0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel5_IRQHandler                 0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel6_IRQHandler                 0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    DMA1_Channel7_IRQHandler                 0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI0_IRQHandler                         0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI15_10_IRQHandler                     0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI1_IRQHandler                         0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI2_IRQHandler                         0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI3_IRQHandler                         0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI4_IRQHandler                         0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    EXTI9_5_IRQHandler                       0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    FLASH_IRQHandler                         0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C1_ER_IRQHandler                       0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C1_EV_IRQHandler                       0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C2_ER_IRQHandler                       0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    I2C2_EV_IRQHandler                       0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    PVD_IRQHandler                           0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    RCC_IRQHandler                           0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    RTCAlarm_IRQHandler                      0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    RTC_IRQHandler                           0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    SPI1_IRQHandler                          0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    SPI2_IRQHandler                          0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TAMPER_IRQHandler                        0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM1_BRK_IRQHandler                      0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM1_CC_IRQHandler                       0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM1_TRG_COM_IRQHandler                  0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM1_UP_IRQHandler                       0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM2_IRQHandler                          0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM3_IRQHandler                          0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    TIM4_IRQHandler                          0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USART1_IRQHandler                        0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USART2_IRQHandler                        0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USART3_IRQHandler                        0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USBWakeUp_IRQHandler                     0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USB_HP_CAN1_TX_IRQHandler                0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    USB_LP_CAN1_RX0_IRQHandler               0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    WWDG_IRQHandler                          0x08000107   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    __user_initial_stackheap                 0x08000109   Thumb Code     0  startup_stm32f10x_md.o(.text)
+    __use_two_region_memory                  0x0800012d   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_escrow$2region                 0x0800012f   Thumb Code     2  heapauxi.o(.text)
+    __rt_heap_expand$2region                 0x08000131   Thumb Code     2  heapauxi.o(.text)
+    SystemInit                               0x08000261   Thumb Code   102  system_stm32f10x.o(.text.SystemInit)
+    __main                                   0x080002c9   Thumb Code   306  phase1.o(MYCODE)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x080000ed
+
+  Load Region LR_1 (Base: 0x08000000, Size: 0x00003170, Max: 0xffffffff, ABSOLUTE)
+
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00003140, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x08000000   0x08000000   0x000000ec   Data   RO           13    RESET               startup_stm32f10x_md.o
+    0x080000ec   0x080000ec   0x00000040   Code   RO           14  * .text               startup_stm32f10x_md.o
+    0x0800012c   0x0800012c   0x00000006   Code   RO           37    .text               c_w.l(heapauxi.o)
+    0x08000132   0x08000132   0x00000002   PAD
+    0x08000134   0x08000134   0x00000008   Code   RO           21    .text.SetSysClock   system_stm32f10x.o
+    0x0800013c   0x0800013c   0x00000122   Code   RO           25    .text.SetSysClockTo72  system_stm32f10x.o
+    0x0800025e   0x0800025e   0x00000002   PAD
+    0x08000260   0x08000260   0x00000066   Code   RO           19    .text.SystemInit    system_stm32f10x.o
+    0x080002c6   0x080002c6   0x00000002   PAD
+    0x080002c8   0x080002c8   0x00002e78   Code   RO            2  * MYCODE              phase1.o
+
+
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x08003140, Size: 0x00000030, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x08003140   0x0000002e   Data   RW            1    MYDATA              phase1.o
+
+
+    Execution Region ER_ZI (Exec base: 0x20000030, Load base: 0x08003170, Size: 0x00000600, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000030        -       0x00000200   Zero   RW           12    HEAP                startup_stm32f10x_md.o
+    0x20000230        -       0x00000400   Zero   RW           11    STACK               startup_stm32f10x_md.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+     11896        266          0         46          0       7080   phase1.o
+        64         26        236          0       1536        804   startup_stm32f10x_md.o
+       400          0          0          0          0       2854   system_stm32f10x.o
+
+    ----------------------------------------------------------------------
+     12364        292        236         48       1536      10738   Object Totals
+         0          0          0          0          0          0   (incl. Generated)
+         4          0          0          2          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         6          0          0          0          0        152   heapauxi.o
+
+    ----------------------------------------------------------------------
+         8          0          0          0          0        152   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+         6          0          0          0          0        152   c_w.l
+
+    ----------------------------------------------------------------------
+         8          0          0          0          0        152   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+     12372        292        236         48       1536      10838   Grand Totals
+     12372        292        236         48       1536      10838   ELF Image Totals
+     12372        292        236         48          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                12608 (  12.31kB)
+    Total RW  Size (RW Data + ZI Data)              1584 (   1.55kB)
+    Total ROM Size (Code + RO Data + RW Data)      12656 (  12.36kB)
+
+==============================================================================
+
